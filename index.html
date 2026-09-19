@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>batuta — arte generativa regida por Jev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="stage"></canvas>
+    <header class="brand">
+      <h1>batuta</h1>
+      <p>arte generativa regida por <a href="https://typesafe.ai" target="_blank" rel="noreferrer">Jev</a></p>
+    </header>
+    <aside id="panel" class="panel" hidden></aside>
+    <footer class="console">
+      <input
+        id="frase"
+        type="text"
+        placeholder="descreva um clima… ex: melancolia de domingo à tarde"
+        autocomplete="off"
+        spellcheck="false"
+        autofocus
+      />
+      <div class="controls">
+        <label class="slider-label">
+          <span>obediência</span>
+          <input id="chaos" type="range" min="0" max="100" value="0" />
+          <span>acaso</span>
+        </label>
+        <button id="reroll" title="Re-sorteia da mesma distribuição — sem nova chamada">re-sortear</button>
+        <button id="save">salvar PNG</button>
+      </div>
+      <p id="status" class="status"></p>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
