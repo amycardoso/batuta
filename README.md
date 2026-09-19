@@ -5,6 +5,25 @@ System One model. You type a mood in Portuguese or English ("melancolia de
 domingo à tarde", "carnaval às 3 da manhã") and a flow-field artwork repaints
 itself to match. Jev never draws a pixel: it is the conductor, not the brush.
 
+## Gallery
+
+Three phrases, three artworks — same code, same model, different conducting:
+
+**"melancolia de domingo à tarde"** → palette *Domingo à tarde*, névoa, density 7%, energy 3%:
+
+![melancolia de domingo à tarde](docs/batuta-domingo.gif)
+
+**"carnaval às 3 da manhã"** → palette *Carnaval*, fitas, energy 87%, turbulence 91% — then the
+slider goes to *acaso* and one re-roll samples a symmetric *Neon na garoa* from the same
+distributions, no extra API call:
+
+![carnaval às 3 da manhã](docs/batuta-carnaval.gif)
+
+**"haicai escrito à tinta num papel antigo"** → palette *Tinta e papel*, filamentos, everything
+near minimum — ink strokes on old paper:
+
+![haicai escrito à tinta num papel antigo](docs/batuta-tinta.gif)
+
 ## How it differs from the Jev pixel-painters
 
 Projects like jev-paint and typesafe-image-diffusion use Jev *as the image
